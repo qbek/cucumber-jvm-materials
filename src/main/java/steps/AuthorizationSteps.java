@@ -1,17 +1,24 @@
 package steps;
 
+import data.SecretData;
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import data.UserAccount;
+import net.thucydides.core.annotations.Steps;
 
 public class AuthorizationSteps {
 
     private String accountType = "Standard";
+
+    @Steps(shared = true)
+    SecretData data;
 
     @Step("User logs in using '{0}' as login, and '{1}' as password")
     public void userLogsInUsingCredentials(String login, String pass) {
         System.out.println("Enter login into login input, login: " + login);
         System.out.println("Enter pas into pass input, pass: " + pass);
         System.out.println("Press login button");
+        data.setData("bardzo tajna wiadomosc");
     }
 
     public void userLogsInUsingCredentials(UserAccount account) {

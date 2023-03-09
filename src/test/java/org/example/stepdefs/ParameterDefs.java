@@ -1,11 +1,13 @@
 package org.example.stepdefs;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.ParameterType;
 import net.serenitybdd.core.Serenity;
 import data.UserAccount;
 
 public class ParameterDefs {
 
+    private static Faker generator = new Faker();
 
     @ParameterType("true|false")
     public boolean bool(String s) {
@@ -30,5 +32,10 @@ public class ParameterDefs {
     @ParameterType("he|user|she")
     public UserAccount account(String s) {
         return (UserAccount) Serenity.sessionVariableCalled("userAccount");
+    }
+
+    @ParameterType("new todo")
+    public String newTodo(String s) {
+        return generator.programmingLanguage().creator();
     }
 }

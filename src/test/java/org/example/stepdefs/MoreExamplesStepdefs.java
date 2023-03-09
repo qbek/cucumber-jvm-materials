@@ -5,11 +5,15 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import data.UserAccount;
 import steps.AuthorizationSteps;
+import steps.TodoManagementSteps;
 
 public class MoreExamplesStepdefs {
 
     @Steps
     AuthorizationSteps authSteps;
+
+    @Steps
+    TodoManagementSteps todoSteps;
 
     @When("{account} enters his credentials on login screen")
     public void heEntersHisCredetilsOnLoginScreen(UserAccount account) {
@@ -21,4 +25,11 @@ public class MoreExamplesStepdefs {
         authSteps.userLogsInUsingCredentials(account.getLogin(), account.getPassword());
         authSteps.userSuccessfullyLogsIn(account.getLogin());
     }
+
+    @When("he creates a {newTodo}")
+    public void heCreatesANewTodo(String todoName) {
+        todoSteps.userCreatesANewTodo(todoName);
+    }
+
+
 }

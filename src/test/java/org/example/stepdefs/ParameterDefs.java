@@ -2,7 +2,7 @@ package org.example.stepdefs;
 
 import io.cucumber.java.ParameterType;
 import net.serenitybdd.core.Serenity;
-import org.example.data.UserAccount;
+import data.UserAccount;
 
 public class ParameterDefs {
 

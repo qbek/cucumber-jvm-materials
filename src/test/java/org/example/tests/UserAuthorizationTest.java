@@ -2,9 +2,8 @@ package org.example.tests;
 
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.junit.SerenityJUnitTestCase;
-import org.example.data.UserAccount;
-import org.example.steps.AuthorizationSteps;
+import data.UserAccount;
+import steps.AuthorizationSteps;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 

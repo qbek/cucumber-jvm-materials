@@ -2,11 +2,10 @@ package org.example.stepdefs;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Steps;
-import org.example.data.UserAccount;
-import org.example.steps.AuthorizationSteps;
+import data.UserAccount;
+import steps.AuthorizationSteps;
 
 public class SomeExamplesStepdefs {
 

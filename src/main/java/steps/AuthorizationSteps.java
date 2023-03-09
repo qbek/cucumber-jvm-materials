@@ -1,8 +1,7 @@
-package org.example.steps;
+package steps;
 
-import com.ibm.icu.text.SymbolTable;
 import net.thucydides.core.annotations.Step;
-import org.example.data.UserAccount;
+import data.UserAccount;
 
 public class AuthorizationSteps {
 

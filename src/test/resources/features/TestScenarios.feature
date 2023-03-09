@@ -1,4 +1,4 @@
-Feature: Some examples
+Feature: Test scenarios
 
   Background:
     Given there is a standard user account

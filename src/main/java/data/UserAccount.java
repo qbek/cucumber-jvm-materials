@@ -1,4 +1,4 @@
-package org.example.data;
+package data;
 
 public class UserAccount {
 

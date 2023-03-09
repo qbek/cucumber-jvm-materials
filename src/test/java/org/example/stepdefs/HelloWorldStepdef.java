@@ -1,10 +1,9 @@
 package org.example.stepdefs;
 
-import com.google.gson.JsonObject;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.example.data.UserAccount;
+import data.UserAccount;
 import org.json.JSONObject;
 
 import java.util.List;

@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 
 //@ExtendWith(SerenityJUnit5Extension.class)
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "classpath:features", tags = "@smoke")
+@CucumberOptions(features = "classpath:features")
 public class CucumberTest {
 }

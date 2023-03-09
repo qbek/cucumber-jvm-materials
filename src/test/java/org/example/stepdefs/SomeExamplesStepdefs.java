@@ -4,15 +4,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
+import net.thucydides.core.annotations.Steps;
 import org.example.data.UserAccount;
+import org.example.steps.AuthorizationSteps;
 
 public class SomeExamplesStepdefs {
 
-    @Given("there is a {accountType} user account")
-    public void thereIsAStandardUserAccount(UserAccount account) {}
+    @Steps
+    AuthorizationSteps authSteps;
 
-    @Then("he is logged in")
-    public void heIsLoggedIn() {
-        System.out.println("Checking if on main scree1n");
+    @Given("there is a {accountType} user account")
+    public void thereIsAStandardUserAccount(UserAccount account) {
+        Serenity.recordReportData().withTitle("User account details").andContents(account.toString());
+    }
+
+    @Then("{account} successfully logs in")
+    public void heIsLoggedIn(UserAccount account) {
+        authSteps.userSuccessfullyLogsIn(account.getLogin());
     }
 }

@@ -50,13 +50,13 @@
 <!--            <scope>test</scope>-->
 <!--        </dependency>-->
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit5 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>net.serenity-bdd</groupId>-->
-<!--            <artifactId>serenity-junit5</artifactId>-->
-<!--            <version>3.6.12</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit5 -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-junit5</artifactId>
+            <version>3.6.12</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 

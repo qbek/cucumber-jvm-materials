@@ -17,4 +17,9 @@ public class UserAccount {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public String toString() {
+        return "login: " + login + ", pass: " + password;
+    }
 }

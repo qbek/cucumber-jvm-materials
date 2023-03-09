@@ -1,7 +1,13 @@
 Feature: Some examples
 
+  Background:
+    Given there is a standard user account
 
   Scenario: User logs in
-    Given there is a standard user account
     When he enters his credentials on login screen
-    Then he is logged in
+    Then he successfully logs in
+
+  Scenario: User can create a todo
+    Given he is logged in
+    When he creates a new todo
+    Then todo is created

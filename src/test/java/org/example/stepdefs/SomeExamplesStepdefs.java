@@ -8,12 +8,8 @@ import org.example.data.UserAccount;
 
 public class SomeExamplesStepdefs {
 
-
-
     @Given("there is a {accountType} user account")
-    public void thereIsAStandardUserAccount(UserAccount account) {
-        Serenity.setSessionVariable("userAccount").to(account);
-    }
+    public void thereIsAStandardUserAccount(UserAccount account) {}
 
     @Then("he is logged in")
     public void heIsLoggedIn() {

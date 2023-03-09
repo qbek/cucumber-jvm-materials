@@ -1,6 +1,7 @@
 package org.example.stepdefs;
 
 import io.cucumber.java.ParameterType;
+import net.serenitybdd.core.Serenity;
 import org.example.data.UserAccount;
 
 public class ParameterDefs {
@@ -16,10 +17,18 @@ public class ParameterDefs {
 
     @ParameterType("standard|premium")
     public UserAccount accountType(String s) {
+        UserAccount account;
         if (s.equals("standard")) {
-            return new UserAccount("standard", "passStandard");
+            account = new UserAccount("standard", "passStandard");
         } else {
-            return new UserAccount("premium", "premium");
+            account = new UserAccount("premium", "premium");
         }
+        Serenity.setSessionVariable("userAccount").to(account);
+        return account;
+    }
+
+    @ParameterType("he|user|she")
+    public UserAccount account(String s) {
+        return (UserAccount) Serenity.sessionVariableCalled("userAccount");
     }
 }
